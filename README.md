@@ -1,63 +1,55 @@
-🏅 Avaliação de Atletas
+# Projeto - Avaliação de Atletas
 
-Este projeto é uma aplicação em JavaScript que desenvolvi para receber informações de um atleta, calcular alguns parâmetros e exibir os resultados no console.
+Este projeto em JavaScript recebe informações de um atleta, calcula alguns parâmetros e exibe os resultados no console.
 
-O objetivo era praticar lógica de programação, trabalhar com classes, métodos e arrays, e criar algo que pudesse ser reutilizado para mais de um atleta.
+A aplicação foi desenvolvida para praticar conceitos de lógica de programação, classes e manipulação de arrays.
 
-⚡ Como funciona
+## 📌 Objetivo
 
-Criei uma classe chamada Atleta, que funciona como um molde para armazenar os dados de cada atleta e calcular os parâmetros necessários. Cada atleta possui:
+O sistema recebe as informações de um atleta:
 
-🧑‍💼 Dados: nome, idade, peso, altura e notas
+- Nome
+- Idade
+- Peso
+- Altura
+- Notas obtidas na avaliação
 
-⚙️ Métodos para:
+Com base nesses dados, o programa calcula alguns parâmetros importantes e exibe o resultado no console.
 
-Calcular a categoria de acordo com a idade
+## ⚙️ Tecnologias utilizadas
 
-Calcular o IMC
+- JavaScript
+- Classes e métodos
+- Métodos de array (`sort`, `splice`, `forEach`)
+- Template strings
 
-Calcular a média válida das notas, descartando as duas menores
+## 🧠 Lógica utilizada
 
-Depois de criar um objeto do atleta, usei os métodos da classe para exibir todas as informações no console usando template strings.
+1. Os dados do atleta são armazenados em uma classe chamada `Atleta`
+2. A categoria do atleta é definida de acordo com a idade
+3. O IMC é calculado utilizando peso e altura
+4. As notas são ordenadas usando `sort()`
+5. As duas menores notas são removidas com `splice()`
+6. As notas restantes são somadas e a média válida é calculada
+7. Os resultados são exibidos no console
 
-💻 Código principal
+## 📊 Informações exibidas
 
-Exemplo de criação de atleta:
+O programa mostra no console:
 
-const atleta = new Atleta("Daniel Lima", 30, 82, 1.77, [5.6, 8.5, 7, 9.6, 8]);
+- Nome do atleta
+- Idade
+- Peso
+- Altura
+- Notas obtidas
+- Categoria do atleta
+- IMC calculado
+- Média válida das notas
 
-Exibição das informações:
+## ▶️ Como executar
 
-console.log(`
-Nome: ${atleta.obtemNomeAtleta()}
-Idade: ${atleta.obtemIdadeAtleta()}
-Peso: ${atleta.obtemPesoAtleta()}
-Altura: ${atleta.altura}
-Notas: ${atleta.obtemNotasAtleta()}
-Categoria: ${atleta.obtemCategoria()}
-IMC: ${atleta.obtemIMC().toFixed(2)}
-Média válida: ${atleta.obtemMediaValida().toFixed(1)}
-`);
-📊 Exemplo de saída
-Nome: Daniel Lima
-Idade: 30
-Peso: 82
-Altura: 1.77
-Notas: 5.6,8.5,7,9.6,8
-Categoria: Adulto
-IMC: 26.17
-Média válida: 8.4
-🧠 O que aprendi
-
-🏗️ Criar classes e objetos para organizar dados e funções
-
-📊 Trabalhar com arrays: ordenar, remover elementos e calcular média
-
-🔧 Usar funções e métodos para cálculos específicos
-
-📝 Formatar números com toFixed() e exibir informações de forma clara
-
-🎯 Objetivo do projeto
-
-O projeto foi feito para treinar lógica de programação e manipulação de dados aplicados a um caso real: a avaliação de atletas.
-A ideia é que seja fácil adicionar novos atletas e calcular os parâmetros automaticamente.
+1. Instale o Node.js
+2. Clone o repositório
+3. Abra o terminal na pasta do projeto
+4. Execute o arquivo JavaScript com:
+node index.js
